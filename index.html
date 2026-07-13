@@ -1,0 +1,846 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Professional portfolio of Ibtisam Hossain, a customer-focused professional with experience in repair services, retail operations, and financial services preparation." />
+  <title>Ibtisam Hossain | Professional Portfolio</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+    :root {
+      --navy: #0f172a;
+      --navy-light: #1e293b;
+      --blue: #2563eb;
+      --blue-light: #60a5fa;
+      --white: #ffffff;
+      --soft-white: #f8fafc;
+      --gray: #64748b;
+      --light-gray: #e2e8f0;
+      --shadow: 0 18px 45px rgba(15, 23, 42, 0.10);
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Inter', Arial, sans-serif;
+      background: var(--soft-white);
+      color: var(--navy-light);
+      line-height: 1.7;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.94);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    nav {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 72px;
+      padding: 0 24px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    nav h2 {
+      color: var(--white);
+      font-size: 1.2rem;
+      letter-spacing: -0.02em;
+    }
+
+    nav .links {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: #cbd5e1;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.25s ease;
+    }
+
+    nav a:hover {
+      color: var(--white);
+    }
+
+    nav a:focus-visible,
+    .button:focus-visible {
+      outline: 3px solid #93c5fd;
+      outline-offset: 4px;
+    }
+
+    .hero {
+      min-height: 88vh;
+      position: relative;
+      overflow: hidden;
+      color: var(--white);
+      background:
+        radial-gradient(circle at 85% 20%, rgba(96, 165, 250, 0.35), transparent 28%),
+        radial-gradient(circle at 10% 85%, rgba(37, 99, 235, 0.28), transparent 30%),
+        linear-gradient(135deg, #020617 0%, #0f172a 48%, #1d4ed8 100%);
+    }
+
+    .hero::before,
+    .hero::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      filter: blur(4px);
+      opacity: 0.25;
+    }
+
+    .hero::before {
+      width: 260px;
+      height: 260px;
+      background: #60a5fa;
+      top: -80px;
+      right: -70px;
+    }
+
+    .hero::after {
+      width: 190px;
+      height: 190px;
+      background: #ffffff;
+      bottom: -90px;
+      left: 35%;
+    }
+
+    .hero-inner {
+      max-width: 1200px;
+      margin: auto;
+      min-height: 88vh;
+      padding: 80px 24px;
+      display: grid;
+      grid-template-columns: 1.5fr 0.85fr;
+      align-items: center;
+      gap: 60px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 20px;
+      padding: 8px 14px;
+      border: 1px solid rgba(255,255,255,0.25);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.10);
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+    }
+
+    .eyebrow::before {
+      content: "";
+      width: 9px;
+      height: 9px;
+      border-radius: 50%;
+      background: #86efac;
+      box-shadow: 0 0 0 5px rgba(134, 239, 172, 0.15);
+    }
+
+    .hero h1 {
+      max-width: 760px;
+      font-size: clamp(3rem, 7vw, 5.6rem);
+      line-height: 1.02;
+      letter-spacing: -0.055em;
+      margin-bottom: 24px;
+    }
+
+    .hero h1 span {
+      color: #93c5fd;
+    }
+
+    .hero-text p {
+      max-width: 720px;
+      color: #dbeafe;
+      font-size: 1.08rem;
+      margin-bottom: 16px;
+    }
+
+    .button-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-top: 30px;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 0 24px;
+      border-radius: 999px;
+      text-decoration: none;
+      font-weight: 800;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-3px);
+    }
+
+    .button-primary {
+      background: var(--white);
+      color: var(--blue);
+      box-shadow: 0 12px 30px rgba(255,255,255,0.18);
+    }
+
+    .button-secondary {
+      color: var(--white);
+      border: 1px solid rgba(255,255,255,0.35);
+      background: rgba(255,255,255,0.08);
+    }
+
+    .hero-card {
+      padding: 34px;
+      border-radius: 28px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.2);
+      backdrop-filter: blur(16px);
+      box-shadow: 0 22px 55px rgba(2, 6, 23, 0.28);
+    }
+
+    .hero-card h3 {
+      font-size: 1.45rem;
+      margin-bottom: 14px;
+    }
+
+    .hero-card p {
+      color: #dbeafe;
+      margin-bottom: 22px;
+    }
+
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      padding: 18px;
+      border-radius: 18px;
+      background: rgba(255,255,255,0.10);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 1.55rem;
+      color: var(--white);
+    }
+
+    .stat span {
+      color: #bfdbfe;
+      font-size: 0.86rem;
+    }
+
+    section {
+      padding: 88px 24px;
+    }
+
+    .section-inner {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .section-heading {
+      margin-bottom: 38px;
+    }
+
+    .section-heading span {
+      color: var(--blue);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      font-size: 0.78rem;
+    }
+
+    .section-heading h2 {
+      margin-top: 8px;
+      color: var(--navy);
+      font-size: clamp(2rem, 4vw, 3rem);
+      line-height: 1.15;
+      letter-spacing: -0.04em;
+    }
+
+    .profile {
+      background: var(--white);
+    }
+
+    .profile-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 36px;
+      align-items: start;
+    }
+
+    .profile-copy {
+      font-size: 1.08rem;
+      color: #475569;
+    }
+
+    .highlight-box {
+      padding: 28px;
+      border-radius: 24px;
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      border: 1px solid #bfdbfe;
+    }
+
+    .highlight-box h3 {
+      color: var(--navy);
+      margin-bottom: 10px;
+    }
+
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .skill-card {
+      padding: 28px;
+      border-radius: 22px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border: 1px solid #eef2f7;
+      transition: transform 0.25s ease;
+    }
+
+    .skill-card:hover {
+      transform: translateY(-7px);
+    }
+
+    .skill-icon {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      border-radius: 14px;
+      background: #dbeafe;
+      color: var(--blue);
+      font-size: 1.3rem;
+      margin-bottom: 18px;
+    }
+
+    .skill-card h3 {
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+
+    .skill-card p {
+      color: var(--gray);
+      font-size: 0.95rem;
+    }
+
+    .experience {
+      background: #eef4ff;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      gap: 24px;
+    }
+
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 18px;
+      top: 15px;
+      bottom: 15px;
+      width: 3px;
+      background: #93c5fd;
+      border-radius: 999px;
+    }
+
+    .job {
+      position: relative;
+      margin-left: 55px;
+      padding: 30px;
+      border-radius: 24px;
+      background: var(--white);
+      box-shadow: var(--shadow);
+      border: 1px solid #e2e8f0;
+    }
+
+    .job::before {
+      content: "";
+      position: absolute;
+      left: -46px;
+      top: 34px;
+      width: 17px;
+      height: 17px;
+      border-radius: 50%;
+      background: var(--blue);
+      border: 5px solid #dbeafe;
+    }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-bottom: 12px;
+      flex-wrap: wrap;
+    }
+
+    .job h3 {
+      color: var(--navy);
+      font-size: 1.35rem;
+    }
+
+    .job .company {
+      color: var(--blue);
+      font-weight: 700;
+    }
+
+    .job .date {
+      color: var(--gray);
+      font-size: 0.9rem;
+      font-weight: 700;
+    }
+
+    .job p {
+      color: #475569;
+    }
+
+    .education-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .education-card {
+      padding: 26px;
+      border-radius: 22px;
+      background: var(--white);
+      border: 1px solid #e2e8f0;
+      box-shadow: var(--shadow);
+    }
+
+    .education-card h3 {
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+
+    .education-card p {
+      color: var(--gray);
+    }
+
+    .badge-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 28px;
+    }
+
+    .badge {
+      padding: 10px 15px;
+      border-radius: 999px;
+      background: #dbeafe;
+      color: #1d4ed8;
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    .contact {
+      color: var(--white);
+      background:
+        radial-gradient(circle at 10% 20%, rgba(37,99,235,0.34), transparent 25%),
+        linear-gradient(135deg, #020617, #0f172a);
+    }
+
+    .contact .section-heading h2,
+    .contact .section-heading span {
+      color: var(--white);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 30px;
+    }
+
+    .contact-card {
+      padding: 30px;
+      border-radius: 24px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.14);
+    }
+
+    .contact-card h3 {
+      margin-bottom: 10px;
+    }
+
+    .contact-card p,
+    .contact-card a {
+      color: #cbd5e1;
+    }
+
+    .contact-card a {
+      text-decoration: none;
+    }
+
+    footer {
+      padding: 24px;
+      text-align: center;
+      color: #94a3b8;
+      background: #020617;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 900px) {
+      .hero-inner,
+      .profile-grid,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-inner {
+        padding-top: 60px;
+        padding-bottom: 60px;
+      }
+
+      .skills-grid,
+      .education-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        padding-top: 16px;
+        padding-bottom: 16px;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .skills-grid,
+      .education-grid,
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .hero h1 {
+        font-size: 3rem;
+      }
+
+      .button-row {
+        flex-direction: column;
+      }
+
+      .button {
+        width: 100%;
+      }
+
+      .job {
+        margin-left: 42px;
+        padding: 24px;
+      }
+
+      .timeline::before {
+        left: 10px;
+      }
+
+      .job::before {
+        left: -40px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <nav>
+      <h2>Ibtisam Hossain</h2>
+      <div class="links">
+        <a href="#about">About</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div class="hero-text">
+          <div class="eyebrow">Open to banking and financial services opportunities</div>
+
+          <h1>
+            Helping people.<br>
+            Solving problems.<br>
+            <span>Building trust.</span>
+          </h1>
+
+          <p>
+            Hi, I'm Ibtisam Hossain, a customer-focused professional with 8+ years of experience in repair services, retail operations, cash handling, and high-volume customer service.
+          </p>
+
+          <p>
+            I am open, outgoing, and committed to helping people as best as I can. My experience in repair shops taught me how to listen carefully, explain solutions clearly, and earn customer trust.
+          </p>
+
+          <div class="button-row">
+            <a class="button button-primary"
+               href="Ibtisam-Hossain-Resume.docx"
+               target="_blank"
+               rel="noopener">
+              Explore My Experience
+            </a>
+
+            <a class="button button-secondary" href="#contact">
+              Contact Me
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <h3>My Career Journey</h3>
+          <p>
+            From diagnosing device issues and managing daily business operations to preparing for a career in financial services, I bring hands-on experience with customers, transactions, and problem-solving.
+          </p>
+
+          <div class="stat-grid">
+            <div class="stat">
+              <strong>8+</strong>
+              <span>Years of experience</span>
+            </div>
+
+            <div class="stat">
+              <strong>2</strong>
+              <span>Languages spoken</span>
+            </div>
+
+            <div class="stat">
+              <strong>0</strong>
+              <span>Cash discrepancies</span>
+            </div>
+
+            <div class="stat">
+              <strong>100%</strong>
+              <span>Customer focused</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="profile" id="about">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>About Me</span>
+          <h2>A people-first professional with an operational mindset</h2>
+        </div>
+
+        <div class="profile-grid">
+          <div class="profile-copy">
+            <p>
+              I bring a proven track record of accurate transaction processing, effective team communication, and swift problem resolution. Bilingual in English and Bengali, I thrive in fast-paced, regulated environments and excel at building reliable client relationships.
+            </p>
+          </div>
+
+          <div class="highlight-box">
+            <h3>Professional Goal</h3>
+            <p>
+              I am looking to bring my strong operational foundation, attention to detail, and relationship-building skills into banking and financial services.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>Core Strengths</span>
+          <h2>Skills built through real customer-facing experience</h2>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card">
+            <div class="skill-icon">◎</div>
+            <h3>Customer Service</h3>
+            <p>Relationship building, conflict resolution, client support, and reliable follow-through.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">$</div>
+            <h3>Cash Accuracy</h3>
+            <p>High-volume cash and card processing with close attention to transaction accuracy.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">⚙</div>
+            <h3>Operations</h3>
+            <p>Inventory control, vendor coordination, service logging, and daily business management.</p>
+          </article>
+
+          <article class="skill-card">
+            <div class="skill-icon">✓</div>
+            <h3>Problem Solving</h3>
+            <p>Diagnosing technical and customer issues, then explaining practical solutions clearly.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="experience" id="experience">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>Career History</span>
+          <h2>Professional Experience</h2>
+        </div>
+
+        <div class="timeline">
+          <article class="job">
+            <div class="job-header">
+              <div>
+                <h3>Direct Support Professional</h3>
+                <div class="company">Innovative Resources for Independence | Queens, NY</div>
+              </div>
+              <div class="date">Jan 2026 – Mar 2026</div>
+            </div>
+
+            <p>
+              Provided reliable, client-focused support to individuals requiring daily assistance. Maintained accurate, compliance-driven documentation and coordinated schedules and daily activities in a regulated environment.
+            </p>
+          </article>
+
+          <article class="job">
+            <div class="job-header">
+              <div>
+                <h3>Operations Manager</h3>
+                <div class="company">Ridgewood Wireless | Ridgewood, NY</div>
+              </div>
+              <div class="date">May 2023 – Jan 2026</div>
+            </div>
+
+            <p>
+              Managed daily cash transactions with zero discrepancies across hundreds of weekly transactions. Oversaw inventory, vendor relationships, financial accountability, customer concerns, and end-to-end retail operations.
+            </p>
+          </article>
+
+          <article class="job">
+            <div class="job-header">
+              <div>
+                <h3>Sales &amp; Customer Service Representative</h3>
+                <div class="company">Boss Repairs | Ozone Park, NY</div>
+              </div>
+              <div class="date">Aug 2015 – Feb 2023</div>
+            </div>
+
+            <p>
+              Processed high-volume cash and card transactions while balancing sales, service logging, device-repair support, and customer retention. Built lasting relationships through clear communication and dependable service.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="education">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>Development</span>
+          <h2>Education, Training, and Credentials</h2>
+        </div>
+
+        <div class="education-grid">
+          <article class="education-card">
+            <h3>Financial Services Training</h3>
+            <p>UNIDOS.US / St. Nicks Alliance</p>
+          </article>
+
+          <article class="education-card">
+            <h3>Business Technology</h3>
+            <p>Queensborough Community College</p>
+          </article>
+
+          <article class="education-card">
+            <h3>High School Diploma</h3>
+            <p>Business Technology Early College High School</p>
+          </article>
+        </div>
+
+        <div class="badge-list">
+          <span class="badge">Wells Fargo Commercial Banking Simulation</span>
+          <span class="badge">Chase for Business Impact</span>
+          <span class="badge">CPR / First Aid</span>
+          <span class="badge">Bilingual: English &amp; Bengali</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact">
+      <div class="section-inner">
+        <div class="section-heading">
+          <span>Get in Touch</span>
+          <h2>Let’s connect</h2>
+        </div>
+
+        <div class="contact-grid">
+          <div class="contact-card">
+            <h3>Professional Opportunities</h3>
+            <p>
+              I am interested in customer service, banking, financial services, operations, and relationship-focused opportunities.
+            </p>
+          </div>
+
+          <div class="contact-card">
+            <h3>Contact Information</h3>
+            <p>Queens Village, NY 11427</p>
+            <p><a href="tel:+19294069564">(929) 406-9564</a></p>
+            <p><a href="mailto:ibtisamhossain1738@gmail.com">ibtisamhossain1738@gmail.com</a></p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Ibtisam Hossain | Queens Village, NY
+  </footer>
+
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(link => {
+      link.addEventListener('click', event => {
+        const targetId = link.getAttribute('href');
+        const target = document.querySelector(targetId);
+
+        if (target) {
+          event.preventDefault();
+          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          history.pushState(null, '', targetId);
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
