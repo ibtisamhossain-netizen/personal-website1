@@ -1,12 +1,12 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Professional portfolio of Ibtisam Hossain, a customer-focused professional with experience in repair services, retail operations, and financial services preparation." />
-  <title>Ibtisam Hossain | Professional Portfolio</title>
-
-  <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="Professional portfolio of Ibtisam Hossain, a customer-focused professional with experience in repair services, retail operations, and financial services preparation." name="description"/>
+<title>Ibtisam Hossain | Professional Portfolio</title>
+<style>
     @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 
     :root {
@@ -467,6 +467,42 @@
       font-size: 0.9rem;
     }
 
+
+    .why-section {
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+      margin-top: 30px;
+    }
+
+    .why-item {
+      display: flex;
+      gap: 14px;
+      padding: 22px;
+      border-radius: 18px;
+      background: rgba(255,255,255,.82);
+      border: 1px solid #bfdbfe;
+    }
+
+    .why-check {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      flex: 0 0 30px;
+      border-radius: 50%;
+      background: #16a34a;
+      color: white;
+      font-weight: 800;
+    }
+
+    .why-item h3 { margin-bottom: 4px; }
+    .why-item p { color: #64748b; }
+
     .contact {
       color: var(--white);
       background:
@@ -526,7 +562,8 @@
       }
 
       .skills-grid,
-      .education-grid {
+      .education-grid,
+      .why-grid {
         grid-template-columns: repeat(2, 1fr);
       }
 
@@ -541,7 +578,8 @@
     @media (max-width: 620px) {
       .skills-grid,
       .education-grid,
-      .stat-grid {
+      .stat-grid,
+      .why-grid {
         grid-template-columns: 1fr;
       }
 
@@ -570,264 +608,324 @@
         left: -40px;
       }
     }
-  </style>
+  
+    .hero-visual {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+    }
+
+    .profile-frame {
+      width: min(100%, 390px);
+      aspect-ratio: 1 / 1;
+      padding: 7px;
+      border-radius: 50%;
+      background: rgba(255,255,255,0.95);
+      box-shadow: 0 26px 70px rgba(2, 6, 23, 0.42);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .profile-frame:hover {
+      transform: translateY(-6px) scale(1.01);
+      box-shadow: 0 32px 80px rgba(2, 6, 23, 0.50);
+    }
+
+    .profile-frame img {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      border-radius: 50%;
+    }
+
+    .hero-visual .hero-card {
+      width: 100%;
+      padding: 28px;
+    }
+
+    .hero-visual .hero-card > p {
+      margin-bottom: 20px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-visual {
+        max-width: 560px;
+        width: 100%;
+        margin: 0 auto;
+      }
+
+      .profile-frame {
+        width: min(72vw, 360px);
+      }
+
+      .hero-text {
+        text-align: center;
+      }
+
+      .hero-text p {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .eyebrow,
+      .button-row {
+        justify-content: center;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .profile-frame {
+        width: min(82vw, 310px);
+      }
+
+      .hero-inner {
+        gap: 38px;
+      }
+
+      .hero-visual .hero-card {
+        padding: 24px;
+      }
+    }
+</style>
 </head>
-
 <body>
-  <header>
-    <nav>
-      <h2>Ibtisam Hossain</h2>
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#experience">Experience</a>
-        <a href="#education">Education</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </nav>
-  </header>
-
-  <main>
-    <section class="hero">
-      <div class="hero-inner">
-        <div class="hero-text">
-          <div class="eyebrow">Open to banking and financial services opportunities</div>
-
-          <h1>
-            Helping people.<br>
-            Solving problems.<br>
-            <span>Building trust.</span>
-          </h1>
-
-          <p>
-            Hi, I'm Ibtisam Hossain, a customer-focused professional with 8+ years of experience in repair services, retail operations, cash handling, and high-volume customer service.
+<header>
+<nav>
+<h2><a href="#home" style="color:white;text-decoration:none;">Ibtisam Hossain</a></h2>
+<div class="links">
+<a href="#about">About</a>
+<a href="#experience">Experience</a>
+<a href="#education">Education</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</div>
+</nav>
+</header>
+<main>
+<section class="hero" id="home">
+<div class="hero-inner">
+<div class="hero-text">
+<div class="eyebrow">Open to banking and financial services opportunities</div>
+<h1>
+            Customer-focused professional transitioning into
+            <span>banking and financial services.</span>
+</h1>
+<p>
+            Hi, I'm Ibtisam Hossain. I bring more than eight years of experience helping customers, managing retail operations, handling cash accurately, and solving problems in fast-paced environments.
           </p>
-
-          <p>
-            I am open, outgoing, and committed to helping people as best as I can. My experience in repair shops taught me how to listen carefully, explain solutions clearly, and earn customer trust.
+<p>
+            I am now bringing those strengths into banking and financial services, where trust, accuracy, and strong relationships matter every day.
           </p>
-
-          <div class="button-row">
-            <a class="button button-primary"
-               href="Ibtisam-Hossain-Resume.docx"
-               target="_blank"
-               rel="noopener">
-              Explore My Experience
+<div class="button-row">
+<a class="button button-primary" download="" href="Ibtisam-Hossain-Resume.docx" rel="noopener" target="_blank">
+              Download Resume
             </a>
-
-            <a class="button button-secondary" href="#contact">
+<a class="button button-secondary" href="#experience">
+              View My Experience
+            </a>
+<a class="button button-secondary" href="#contact">
               Contact Me
             </a>
-          </div>
-        </div>
+</div>
+</div>
 
-        <div class="hero-card">
-          <h3>My Career Journey</h3>
-          <p>
-            From diagnosing device issues and managing daily business operations to preparing for a career in financial services, I bring hands-on experience with customers, transactions, and problem-solving.
+<div class="hero-visual"><div class="profile-frame"><img alt="Professional portrait of Ibtisam Hossain" src="profile-photo.png"/></div><div class="hero-card">
+<h3>What I Bring</h3>
+<p>
+            A practical, people-first background built through customer service, business operations, cash accountability, and technical problem-solving.
           </p>
-
-          <div class="stat-grid">
-            <div class="stat">
-              <strong>8+</strong>
-              <span>Years of experience</span>
-            </div>
-
-            <div class="stat">
-              <strong>2</strong>
-              <span>Languages spoken</span>
-            </div>
-
-            <div class="stat">
-              <strong>0</strong>
-              <span>Cash discrepancies</span>
-            </div>
-
-            <div class="stat">
-              <strong>100%</strong>
-              <span>Customer focused</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="profile" id="about">
-      <div class="section-inner">
-        <div class="section-heading">
-          <span>About Me</span>
-          <h2>A people-first professional with an operational mindset</h2>
-        </div>
-
-        <div class="profile-grid">
-          <div class="profile-copy">
-            <p>
-              I bring a proven track record of accurate transaction processing, effective team communication, and swift problem resolution. Bilingual in English and Bengali, I thrive in fast-paced, regulated environments and excel at building reliable client relationships.
+<div class="stat-grid">
+<div class="stat">
+<strong>8+</strong>
+<span>Years of experience</span>
+</div>
+<div class="stat">
+<strong>2</strong>
+<span>Languages spoken</span>
+</div>
+<div class="stat">
+<strong>0</strong>
+<span>Cash discrepancies</span>
+</div>
+<div class="stat">
+<strong>100%</strong>
+<span>Customer focused</span>
+</div>
+</div>
+</div></div></div>
+</section>
+<section class="profile" id="about">
+<div class="section-inner">
+<div class="section-heading">
+<span>About Me</span>
+<h2>A people-first professional with an operational mindset</h2>
+</div>
+<div class="profile-grid">
+<div class="profile-copy">
+<p>
+              My career started in mobile device repair, where every customer came in with a problem that needed a clear and practical solution. I learned how to diagnose issues, explain options simply, and build trust through dependable service.
             </p>
-          </div>
-
-          <div class="highlight-box">
-            <h3>Professional Goal</h3>
-            <p>
+<p style="margin-top:16px;">
+              As I moved into operations management, I strengthened my skills in cash accountability, inventory, vendor coordination, customer service, and daily business management. These experiences prepared me to bring accuracy, communication, and a customer-first mindset into banking and financial services.
+            </p>
+</div>
+<div class="highlight-box">
+<h3>Professional Goal</h3>
+<p>
               I am looking to bring my strong operational foundation, attention to detail, and relationship-building skills into banking and financial services.
             </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section id="skills">
-      <div class="section-inner">
-        <div class="section-heading">
-          <span>Core Strengths</span>
-          <h2>Skills built through real customer-facing experience</h2>
-        </div>
-
-        <div class="skills-grid">
-          <article class="skill-card">
-            <div class="skill-icon">◎</div>
-            <h3>Customer Service</h3>
-            <p>Relationship building, conflict resolution, client support, and reliable follow-through.</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon">$</div>
-            <h3>Cash Accuracy</h3>
-            <p>High-volume cash and card processing with close attention to transaction accuracy.</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon">⚙</div>
-            <h3>Operations</h3>
-            <p>Inventory control, vendor coordination, service logging, and daily business management.</p>
-          </article>
-
-          <article class="skill-card">
-            <div class="skill-icon">✓</div>
-            <h3>Problem Solving</h3>
-            <p>Diagnosing technical and customer issues, then explaining practical solutions clearly.</p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="experience" id="experience">
-      <div class="section-inner">
-        <div class="section-heading">
-          <span>Career History</span>
-          <h2>Professional Experience</h2>
-        </div>
-
-        <div class="timeline">
-          <article class="job">
-            <div class="job-header">
-              <div>
-                <h3>Direct Support Professional</h3>
-                <div class="company">Innovative Resources for Independence | Queens, NY</div>
-              </div>
-              <div class="date">Jan 2026 – Mar 2026</div>
-            </div>
-
-            <p>
+</div>
+</div>
+</div>
+</section>
+<section id="skills">
+<div class="section-inner">
+<div class="section-heading">
+<span>Core Strengths</span>
+<h2>Skills built through real customer-facing experience</h2>
+</div>
+<div class="skills-grid">
+<article class="skill-card">
+<div class="skill-icon">◎</div>
+<h3>Customer Service</h3>
+<p>Relationship building, conflict resolution, client support, and reliable follow-through.</p>
+</article>
+<article class="skill-card">
+<div class="skill-icon">$</div>
+<h3>Cash Accuracy</h3>
+<p>High-volume cash and card processing with close attention to transaction accuracy.</p>
+</article>
+<article class="skill-card">
+<div class="skill-icon">⚙</div>
+<h3>Operations</h3>
+<p>Inventory control, vendor coordination, service logging, and daily business management.</p>
+</article>
+<article class="skill-card">
+<div class="skill-icon">✓</div>
+<h3>Problem Solving</h3>
+<p>Diagnosing technical and customer issues, then explaining practical solutions clearly.</p>
+</article>
+</div>
+</div>
+</section>
+<section class="experience" id="experience">
+<div class="section-inner">
+<div class="section-heading">
+<span>Career History</span>
+<h2>Professional Experience</h2>
+</div>
+<div class="timeline">
+<article class="job">
+<div class="job-header">
+<div>
+<h3>Direct Support Professional</h3>
+<div class="company">Innovative Resources for Independence | Queens, NY</div>
+</div>
+<div class="date">Jan 2026 – Mar 2026</div>
+</div>
+<p>
               Provided reliable, client-focused support to individuals requiring daily assistance. Maintained accurate, compliance-driven documentation and coordinated schedules and daily activities in a regulated environment.
             </p>
-          </article>
-
-          <article class="job">
-            <div class="job-header">
-              <div>
-                <h3>Operations Manager</h3>
-                <div class="company">Ridgewood Wireless | Ridgewood, NY</div>
-              </div>
-              <div class="date">May 2023 – Jan 2026</div>
-            </div>
-
-            <p>
+</article>
+<article class="job">
+<div class="job-header">
+<div>
+<h3>Operations Manager</h3>
+<div class="company">Ridgewood Wireless | Ridgewood, NY</div>
+</div>
+<div class="date">May 2023 – Jan 2026</div>
+</div>
+<p>
               Managed daily cash transactions with zero discrepancies across hundreds of weekly transactions. Oversaw inventory, vendor relationships, financial accountability, customer concerns, and end-to-end retail operations.
             </p>
-          </article>
-
-          <article class="job">
-            <div class="job-header">
-              <div>
-                <h3>Sales &amp; Customer Service Representative</h3>
-                <div class="company">Boss Repairs | Ozone Park, NY</div>
-              </div>
-              <div class="date">Aug 2015 – Feb 2023</div>
-            </div>
-
-            <p>
+</article>
+<article class="job">
+<div class="job-header">
+<div>
+<h3>Sales &amp; Customer Service Representative</h3>
+<div class="company">Boss Repairs | Ozone Park, NY</div>
+</div>
+<div class="date">Aug 2015 – Feb 2023</div>
+</div>
+<p>
               Processed high-volume cash and card transactions while balancing sales, service logging, device-repair support, and customer retention. Built lasting relationships through clear communication and dependable service.
             </p>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section id="education">
-      <div class="section-inner">
-        <div class="section-heading">
-          <span>Development</span>
-          <h2>Education, Training, and Credentials</h2>
-        </div>
-
-        <div class="education-grid">
-          <article class="education-card">
-            <h3>Financial Services Training</h3>
-            <p>UNIDOS.US / St. Nicks Alliance</p>
-          </article>
-
-          <article class="education-card">
-            <h3>Business Technology</h3>
-            <p>Queensborough Community College</p>
-          </article>
-
-          <article class="education-card">
-            <h3>High School Diploma</h3>
-            <p>Business Technology Early College High School</p>
-          </article>
-        </div>
-
-        <div class="badge-list">
-          <span class="badge">Wells Fargo Commercial Banking Simulation</span>
-          <span class="badge">Chase for Business Impact</span>
-          <span class="badge">CPR / First Aid</span>
-          <span class="badge">Bilingual: English &amp; Bengali</span>
-        </div>
-      </div>
-    </section>
-
-    <section class="contact" id="contact">
-      <div class="section-inner">
-        <div class="section-heading">
-          <span>Get in Touch</span>
-          <h2>Let’s connect</h2>
-        </div>
-
-        <div class="contact-grid">
-          <div class="contact-card">
-            <h3>Professional Opportunities</h3>
-            <p>
-              I am interested in customer service, banking, financial services, operations, and relationship-focused opportunities.
+</article>
+</div>
+</div>
+</section>
+<section class="why-section" id="why-me">
+<div class="section-inner">
+<div class="section-heading">
+<span>Why Work With Me</span>
+<h2>A dependable professional with both service and operational discipline</h2>
+</div>
+<div class="why-grid">
+<div class="why-item"><div class="why-check">✓</div><div><h3>Customer-first mindset</h3><p>I listen carefully and focus on practical solutions.</p></div></div>
+<div class="why-item"><div class="why-check">✓</div><div><h3>Strong communication</h3><p>I explain information clearly and respectfully.</p></div></div>
+<div class="why-item"><div class="why-check">✓</div><div><h3>Attention to detail</h3><p>I understand the importance of accuracy and documentation.</p></div></div>
+<div class="why-item"><div class="why-check">✓</div><div><h3>Reliable under pressure</h3><p>I stay organized in fast-paced environments.</p></div></div>
+<div class="why-item"><div class="why-check">✓</div><div><h3>Fast learner</h3><p>I adapt quickly and actively seek feedback.</p></div></div>
+<div class="why-item"><div class="why-check">✓</div><div><h3>Ready to grow</h3><p>I am committed to building a long-term career in financial services.</p></div></div>
+</div>
+</div>
+</section>
+<section id="education">
+<div class="section-inner">
+<div class="section-heading">
+<span>Development</span>
+<h2>Education, Training, and Credentials</h2>
+</div>
+<div class="education-grid">
+<article class="education-card">
+<h3>Financial Services Training</h3>
+<p>UNIDOS.US / St. Nicks Alliance</p>
+</article>
+<article class="education-card">
+<h3>Business Technology</h3>
+<p>Queensborough Community College</p>
+</article>
+<article class="education-card">
+<h3>High School Diploma</h3>
+<p>Business Technology Early College High School</p>
+</article>
+</div>
+<div class="badge-list">
+<span class="badge">Wells Fargo Commercial Banking Simulation</span>
+<span class="badge">Chase for Business Impact</span>
+<span class="badge">CPR / First Aid</span>
+<span class="badge">Bilingual: English &amp; Bengali</span>
+</div>
+</div>
+</section>
+<section class="contact" id="contact">
+<div class="section-inner">
+<div class="section-heading">
+<span>Get in Touch</span>
+<h2>Let’s connect about banking and financial services opportunities</h2>
+</div>
+<div class="contact-grid">
+<div class="contact-card">
+<h3>Professional Opportunities</h3>
+<p>
+              I am currently seeking opportunities in banking, financial services, branch operations, and customer relationship roles. I would welcome the opportunity to discuss how my experience can support your team.
             </p>
-          </div>
-
-          <div class="contact-card">
-            <h3>Contact Information</h3>
-            <p>Queens Village, NY 11427</p>
-            <p><a href="tel:+19294069564">(929) 406-9564</a></p>
-            <p><a href="mailto:ibtisamhossain1738@gmail.com">ibtisamhossain1738@gmail.com</a></p>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
+</div>
+<div class="contact-card">
+<h3>Contact Information</h3>
+<p>Queens Village, NY 11427</p>
+<p><a href="tel:+19294069564">(929) 406-9564</a></p>
+<p><a href="mailto:ibtisamhossain1738@gmail.com">ibtisamhossain1738@gmail.com</a></p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer>
     © 2026 Ibtisam Hossain | Queens Village, NY
   </footer>
-
-  <script>
+<script>
     document.querySelectorAll('a[href^="#"]').forEach(link => {
       link.addEventListener('click', event => {
         const targetId = link.getAttribute('href');
@@ -841,6 +939,5 @@
       });
     });
   </script>
-
 </body>
 </html>
